@@ -1,0 +1,11 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: apps
+  namespace: gotk-system
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: https://github.com/sysadmin4j/gotk-apps.git
