@@ -10,6 +10,7 @@ spec:
     name: gotk-apps-reconciler
     namespace: gotk-apps 
   interval: 5m
+  path: "./"
   prune: true
   sourceRef:
     kind: GitRepository
