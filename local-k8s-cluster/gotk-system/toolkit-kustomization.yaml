@@ -2,8 +2,6 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
-  annotations:
-    fluxcd.io/reconcileAt: 2020-10-24 14:15:51.470027579 +0000 UTC m=+21710.778426164
   name: gotk-system
   namespace: gotk-system
 spec:
