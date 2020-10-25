@@ -48,3 +48,11 @@ gotk get kustomizations gotk-system
 gotk reconcile kustomization gotk-system
 gotk reconcile kustomization gotk-system --with-source
 ```
+
+## Issues
+
+### Reconcile hang/timeout
+https://github.com/sysadmin4j/gotk-system/commit/369c403aca1e4af23f65e1e518e41ca577edd34d
+
+### Rbac not effective
+https://github.com/docker/for-mac/issues/3694
