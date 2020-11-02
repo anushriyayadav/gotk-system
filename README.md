@@ -40,7 +40,6 @@ gotk export kustomization gotk-system > toolkit-kustomization.yaml
 
 ```
 gotk get sources git
-gotk get sources helm
 gotk reconcile source git gotk-system
 ```
 
@@ -50,6 +49,15 @@ gotk reconcile kustomization gotk-system
 gotk reconcile kustomization gotk-system --with-source
 gotk reconcile kustomization gotk-apps --with-source --verbose
 
+helm repo add podinfo https://stefanprodan.github.io/podinfo
+helm repo list
+helm search repo
+helm show chart podinfo/podinfo --version 5.0.3
+
+gotk get sources helm
+gotk reconcile source helm podinfo
+gotk reconcile helmrelease podinfo --namespace gotk-apps
+gotk get helmreleases --namespace gotk-apps
 ```
 
 ## Issues
