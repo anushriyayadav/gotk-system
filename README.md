@@ -34,12 +34,13 @@ gotk create kustomization gotk-system \
   --prune=true \
   --interval=10m
 
-# Export the source configuration yaml
+# Export the kustomization configuration yaml
 gotk export kustomization gotk-system > toolkit-kustomization.yaml
 ```
 
 ```
 gotk get sources git
+gotk get sources helm
 gotk reconcile source git gotk-system
 ```
 
@@ -47,6 +48,8 @@ gotk reconcile source git gotk-system
 gotk get kustomizations gotk-system
 gotk reconcile kustomization gotk-system
 gotk reconcile kustomization gotk-system --with-source
+gotk reconcile kustomization gotk-apps --with-source --verbose
+
 ```
 
 ## Issues
@@ -56,3 +59,5 @@ https://github.com/sysadmin4j/gotk-system/commit/369c403aca1e4af23f65e1e518e41ca
 
 ### Rbac not effective
 https://github.com/docker/for-mac/issues/3694
+
+
